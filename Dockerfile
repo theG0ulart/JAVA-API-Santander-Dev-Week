@@ -14,7 +14,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copie o arquivo JAR gerado pelo Maven
-COPY --from=build /app/target/seu-projeto-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/SimpleBank-0.0.1-SNAPSHOT.jar app.jar
 
 # Comando para rodar o aplicativo
 ENTRYPOINT ["java", "-jar", "app.jar"]
